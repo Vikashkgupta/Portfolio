@@ -1,0 +1,121 @@
+/* ===== Advanced Dark Mode Styling ===== */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+/* === Navbar: Default transparent in dark mode === */
+body.dark-mode .custom-navbar {
+  background-color: transparent;
+}
+
+/* === Navbar: Black only after scroll (when affix class is added) === */
+body.dark-mode .custom-navbar.affix {
+  background-color: #1e1e1e;
+}
+
+/* === Header Text: Always show original color === */
+.header-title .up,
+.header-title .down,
+.header-subtitle {
+  color: #695aa6; /* original purple color */
+}
+
+body.dark-mode .header-title .up,
+body.dark-mode .header-title .down,
+body.dark-mode .header-subtitle {
+  color: #695aa6; /* same in dark mode */
+}
+
+/* ===== Other Dark Mode Elements ===== */
+body.dark-mode .section-title,
+body.dark-mode .section-subtitle,
+body.dark-mode p,
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode h6 {
+  color: #e0e0e0;
+}
+
+body.dark-mode a {
+  color: #90caf9;
+}
+
+body.dark-mode .btn {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #555;
+}
+
+body.dark-mode .form-control {
+  background-color: #222;
+  color: #eee;
+  border-color: #444;
+}
+
+/* ===== Smooth Transition for Theme Switching ===== */
+body,
+.custom-navbar,
+.header,
+.section,
+.btn,
+.form-control {
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* ===== Navbar Toggle Show/Hide for Mobile ===== */
+ul.nav {
+  display: none;
+}
+
+ul.nav.show {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  ul.nav {
+    display: flex !important;
+  }
+}
+
+/* ===== Hamburger Animation Optional Styling ===== */
+.hamburger.is-active .hamburger-inner {
+  background-color: #695aa6;
+  transition: background-color 0.3s ease;
+}
+
+/* Hamburger white in dark mode */
+body.dark-mode .hamburger-inner {
+  background-color: #fff;
+}
+
+
+
+/* Desktop View - Navbar should show links inline and hide hamburger */
+@media (min-width: 992px) {
+  .custom-navbar .nav {
+    display: flex !important;
+    align-items: center;
+    gap: 1rem; /* optional spacing between nav items */
+  }
+
+  #nav-toggle {
+    display: none !important;
+  }
+}
+
+/* Ensure nav links appear properly (in case earlier CSS hides them) */
+@media (min-width: 768px) {
+  .custom-navbar .nav .item {
+    opacity: 1 !important;
+    visibility: visible !important;
+    transform: none !important; /* cleaner than translateY(0) */
+  }
+}

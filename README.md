@@ -6,7 +6,7 @@
 
 Welcome to my developer portfolio! This website showcases my skills, projects, and journey in tech as a passionate Computer Science student 🚀
 
-🌐 **Live Demo:** [vikashkumargupta.netlify.app](https://vikashkumargupta.netlify.app)
+
 🌐 **Live Demo:**  
 - GitHub Pages: https://vikashkgupta.github.io/Portfolio/  
 - Netlify : https://vikashkumargupta.netlify.app
